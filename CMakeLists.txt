@@ -31,6 +31,10 @@ set(SOURCE_FILES
 add_executable(Bank_System
         ${SOURCE_FILES}
         ${SOURCE_DIR}/main.cpp
+        src/validation.cpp
+        src/validation.h
+        src/Bank.h
+        src/Bank.cpp
 )
 
 # Add the test executable

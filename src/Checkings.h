@@ -9,7 +9,7 @@
 
 class Checkings : public Account {
 public:
-  Checkings(const std::string &account_id, long double apr, long double initial_balance ) ;
+  Checkings(const std::string &account_id, long double apr ) ;
 
   void deposit( long double deposit_amount ) override ;
   void withdraw( long double withdraw_amount ) override ;

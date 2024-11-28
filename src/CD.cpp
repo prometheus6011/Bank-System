@@ -4,8 +4,8 @@
 
 #include "CD.h"
 
-CD::CD(const std::string &account_id, long double apr, long double initial_balance)
-  : Account(account_id, apr, initial_balance )
+CD::CD(const std::string &account_id, const long double apr, const long double initial_balance )
+  : Account(account_id, apr, initial_balance, "CD")
 {}
 
 void CD::deposit(long double deposit_amount) {

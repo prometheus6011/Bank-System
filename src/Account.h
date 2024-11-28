@@ -11,7 +11,9 @@ protected:
   const std::string type ;
 
 public:
-  Account( std::string account_id, long double APR, long double account_balance ) ;
+  Account(std::string account_id, long double APR, std::string type);
+  Account(std::string account_id, long double APR, long double initial_balance, std::string type);
+
   virtual ~Account() ;
 
   std::string get_account_id() const ;

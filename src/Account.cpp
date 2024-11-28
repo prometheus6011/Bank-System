@@ -1,8 +1,13 @@
 #include "Account.h"
+
 #include <utility>
 
-Account::Account( std::string account_id, const long double APR, const long double account_balance )
-  : account_id(std::move( account_id )), APR( APR ), account_balance( account_balance ), type("Generic")
+Account::Account( std::string account_id, const long double APR, std::string type )
+  : account_id(std::move( account_id )), APR( APR ), account_balance( 0.0 ), type(std::move(type))
+{}
+
+Account::Account( std::string account_id, const long double APR, const long double initial_balance, std::string type )
+  : account_id(std::move( account_id )), APR( APR ), account_balance( initial_balance ), type(std::move(type))
 {}
 
 Account::~Account() = default;
